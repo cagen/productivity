@@ -1,0 +1,15 @@
+{
+  "name": "productivity",
+  "version": "1.0.0",
+  "description": "boost up working productivity",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "cagen",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "http-proxy": "^1.13.2"
+  }
+}
