@@ -20,7 +20,6 @@
 */
 
 var util = require('util'),
-    colors = require('colors'),
     http = require('http'),
     httpProxy = require('http-proxy');
 
@@ -72,12 +71,12 @@ proxy.on('error', function(e) {
 
 // http://124.202.166.46
 proxy.on('proxyReq', function(proxyReq, req, socket, options, head) {
-  console.log('proxyReq');
+  console.log('proxy start');
 });
 
 
 proxy.on('proxyRes', function(proxyRes, pReq, pRes) {
-  console.log('back');
+  console.log('receive data');
 })
 
 // proxy.listen(4163);

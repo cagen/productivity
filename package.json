@@ -9,7 +9,6 @@
   "author": "cagen",
   "license": "MIT",
   "dependencies": {
-    "colors": "^1.1.2",
     "http-proxy": "^1.13.2"
   }
 }
