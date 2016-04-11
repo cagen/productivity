@@ -71,10 +71,9 @@ proxy.on('error', function(e) {
 });
 
 // http://124.202.166.46
-// proxy.on('proxyReq', function(proxyReq, req, socket, options, head) {
-//   req.headers.host = '124.202.166.46';
-//   req.url = req.url.replace('http://', 'http://124.202.166.46/');
-// });
+proxy.on('proxyReq', function(proxyReq, req, socket, options, head) {
+  console.log('proxyReq');
+});
 
 
 proxy.on('proxyRes', function(proxyRes, pReq, pRes) {
