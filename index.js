@@ -44,7 +44,7 @@ var util = require('util'),
 //   forward: '220.112.195.148:80',
 //   changeOrigin: true,
 //   autoRewrite: true
-// }).listen(8003);
+// }).listen(4163);
 
 // proxy.web()
 
@@ -80,7 +80,7 @@ proxy.on('proxyRes', function(proxyRes, pReq, pRes) {
   console.log('back');
 })
 
-// proxy.listen(8003);
+// proxy.listen(4163);
 
 
 var server = http.createServer(function(req, res) {
@@ -96,6 +96,6 @@ var server = http.createServer(function(req, res) {
 });
 
 
-console.log("listening on port 8003")
-server.listen(8003);
+console.log("listening on port 4163")
+server.listen(4163);
 
