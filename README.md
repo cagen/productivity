@@ -27,7 +27,7 @@ function FindProxyForURL(url, host) {
 function FindProxyForURL(url, host) {
     var musicHost = "m*.music.126.net";
     if(shExpMatch(host,musicHost)){
-      return "proxy localhost:8003"
+      return "proxy localhost:4163"
     }
     if (defaultMatcher.matchesAny(url, host) instanceof BlockingFilter) {
         return proxy;
