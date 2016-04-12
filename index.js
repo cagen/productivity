@@ -12,11 +12,11 @@
   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
   EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
   MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-  NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
-  LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
-  OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+  NONINFRINGEMENT. THIS LITTLE PROXY IS MADE FOR THE GIRL I LOVE.IN NO
+  EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+  DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTIONOF CONTRACT,
+  TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
   WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-  THIS LITTLE PROXY IS MADE FOR THE GIRL I LOVE.
 */
 
 var util = require('util'),
@@ -37,13 +37,19 @@ var proxy = httpProxy.createProxyServer();
 // you need to modify the proxy request before the proxy connection
 // is made to the target.
 proxy.on('proxyReq', function(proxyReq, req, socket, options, head) {
-  console.log('proxy start');
-  console.log(req.url);
+  console.log('PROXY START');
+  console.log('requestHeader: ', req.headers);
+  console.log('requestUrl: ', req.url);
+  console.log('\n');
 });
 
 
 proxy.on('proxyRes', function(proxyRes, pReq, pRes) {
-  console.log('receive data');
+  console.log('RECEIVE DATA');
+  console.log('statusCode: ', proxyRes.statusCode);
+  console.log('statusMessage: ', proxyRes.statusMessage);
+  console.log('responseHeader: ', proxyRes.headers);
+  console.log('\n\n\n');
 });
 
 
